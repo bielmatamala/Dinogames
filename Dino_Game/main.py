@@ -78,4 +78,4 @@ class Dinosarure:
         self.step_index += 1
 
 
-dsf
+#fer un ftx per a les calsses un atre per les imategs... i un per cada clsse(dino, nubol,...)
