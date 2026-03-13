@@ -9,7 +9,7 @@ Una recreació en **Python** del clàssic **Dino Game de Google Chrome**. En aqu
 Aquest projecte està pensat com a pràctica de **programació amb Python** i **desenvolupament bàsic de videojocs**.
 
 
-## 🎮 Característiques
+## Característiques
 
 - Mecànica inspirada en el **Chrome Dino Game**
 - Sistema de puntuació basat en el temps de supervivència
@@ -19,7 +19,7 @@ Aquest projecte està pensat com a pràctica de **programació amb Python** i **
 - Reinici de partida
 - Controls simples i intuïtius
 
-## 🕹 Controls
+## Controls
 
 | Tecla | Acció |
 |------|------|
@@ -27,7 +27,7 @@ Aquest projecte està pensat com a pràctica de **programació amb Python** i **
 | `↓` | Ajupir-se |
 
 
-## 🛠 Tecnologies utilitzades
+## Tecnologies utilitzades
 
 - **Python 3**
 - **Pygame**
