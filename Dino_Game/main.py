@@ -3,7 +3,7 @@ import random
 import os
 from Styles.Style import inicialitzar
 from Classes.Class_Dino import Dinosarure
-from Variables_Globals import Variables_globals
+from Variables_Globals import RUNNING, JUMPING, DOWNING
 
 # Inicializar Pygame
 
@@ -14,8 +14,9 @@ PG = pygame
 inicialitzar()
 
 # Variables Globals 
-Variables_globals()
+
 #Classes
+
 
 
 #Marc -> class: Bird i catctus
