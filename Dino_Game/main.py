@@ -77,5 +77,7 @@ class Dinosarure:
         self.dino_rect.y = self.Y_POS
         self.step_index += 1
 
-
+#Marc -> class: Bird i catctus
+#Biel -> Class: Dino
+#Despres -> cloud, obstacle
 #fer un ftx per a les calsses un atre per les imategs... i un per cada clsse(dino, nubol, ...)
