@@ -1,6 +1,9 @@
 import os 
 import pygame
-from main import RUNNING, JUMPING, DOWNING
+from Styles import Style
+from Style import inicialitzar
+
+inicialitzar()
 
 class Dinosarure:
     X_POS = 80
