@@ -1,8 +1,6 @@
 import pygame as PG
-import os 
-
-import pygame as PG
-import os 
+import os
+ 
 
 # Variables Globals
 RUNNING = [PG.image.load(os.path.join("Assets/Dino", r"DinoRun1.png")),
