@@ -31,10 +31,12 @@ font = pygame.font.Font(None, 36)
 # Variables Globals 
 RUNNING = [PG.image.load(os.path.join(r"dinogames\dino-master\Assets\Dino", r"DinoRun1.png")),
            PG.image.load(os.path.join(r"dinogames\dino-master\Assets\Dino", r"DinoRun2.png"))]
-
+AJUPIT = [PG.image.load(os.path.join(r"dinogames\dino-master\Assets\Dino", r"Dinoajupit1.png")),
+          PG.image.load(os.path.join(r"dinogames\dino-master\Assets\Dino", r"Dinoajupit2.png"))]
+JUMPING = [PG.image.load(os.path.join(r"dinogames\dino-master\Assets\Dino", r"DinoJump.png"))]
 #Classes
 class Dino(pygame.sprite.Sprite):
     def __init__(self):
-        self.duck_img = DUCKING
+        self.ajupit_img = AJUPIT
         self.run_img = RUNNING
         self.jump_img = JUMPING
