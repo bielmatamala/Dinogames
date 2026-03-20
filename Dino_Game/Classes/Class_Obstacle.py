@@ -2,6 +2,7 @@ import os
 import sys
 from pathlib import Path
 import pygame as PG
+from Styles.Style import inicialitzar, SCREEN_WIDTH
 
 # Ensure the project root (Dino_Game) is on sys.path so imports work when running this file directly.
 ROOT = Path(__file__).resolve().parents[1]
