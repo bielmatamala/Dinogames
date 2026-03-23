@@ -1,30 +1,26 @@
-import os
-import sys
-from pathlib import Path
 import pygame as PG
+import random
+import os
+from Styles.Style import SCREEN, inicialitzar
 
-# Ensure imports work when running this file directly (Python sets cwd to Classes/)
-ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
+CLOUD = PG.image.load(os.path.join("Assets/Other", "Cloud.png"))
 
-from Styles.Style import inicialitzar
-from Variables_Globals import RUNNING, JUMPING, DOWNING
-from Classes.Class_Obstacle import Obstacle
+# Classe del núvol que apareix de fons
+class Cloud:
+    def __init__(self):
+        # Posiciona el núvol aleatòriament a la dreta de la pantalla
+        self.x = 1100 + random.randint(800, 1000)
+        self.y = random.randint(50, 100)
+        self.image = CLOUD
+        self.width = self.image.get_width() # Ample de la imatge per a detectar quan surt de la pantalla
 
-inicialitzar()
+    def update(self, game_speed):
+        self.x -= game_speed # Mou el núvol cap a l'esquerra segons la velocitat del joc
+        # Si el núvol surt de la pantalla, el reposiciona a la dreta
+        if self.x < -self.width:
+            self.x = 1100 + random.randint(2500, 3000)
+            self.y = random.randint(50, 100)
 
-class Cloud(Obstacle):
-    def __init__(self, x, y):
-        super().__init__(x, y)
-        self.image = PG.image.load(os.path.join('Assets', 'Cloud.png')).convert_alpha()
-        self.image = PG.transform.scale(self.image, (60, 30))
-        self.rect = self.image.get_rect()
-        self.rect.topleft = (x, y)
-    
-    def update(self):
-        self.rect.x -= 5  # Moure a la esquerra a velocitat constant
-        if self.rect.right < 0:  # Si el nuvol va fora, reinicia la posicio
-            self.rect.left = 800  # assumint que screen width es 800
-    
-    
+    def draw(self, SCREEN):
+        # Dibuixa el núvol a la pantalla
+        SCREEN.blit(self.image, (self.x, self.y))
