@@ -1,9 +1,9 @@
 import pygame as PG
 import random
 import os
-from Styles.Style import SCREEN, inicialitzar
+from Styles.Style import SCREEN
 
-CLOUD = PG.image.load(os.path.join("Assets/Other", "Cloud.png"))
+CLOUD = PG.image.load(os.path.join(r"Assets\Other", r"Cloud.png"))
 
 # Classe del núvol que apareix de fons
 class Cloud:

@@ -1,10 +1,10 @@
-from Dino_Game.Classes.Class_Obstacle import Obstacle
+from Classes.Class_Obstacle import Obstacle
 import pygame as PG
 import os
-from Styles.Style import SCREEN, inicialitzar
+from Styles.Style import SCREEN
 
-BIRD = [PG.image.load(os.path.join("Assets/Bird", "Bird1.png")),
-        PG.image.load(os.path.join("Assets/Bird", "Bird2.png"))]
+BIRD = [PG.image.load(os.path.join(r"Assets\Bird", r"Bird1.png")),
+        PG.image.load(os.path.join(r"Assets\Bird", r"Bird2.png"))]
 
 # Classe de l'ocell que hereta de Obstacle
 class Bird(Obstacle):

@@ -1,7 +1,7 @@
 import pygame as PG
 import random
 import os
-from Styles.Style import SCREEN, inicialitzar
+from Styles.Style import SCREEN
 from Variables_Globals import RUNNING, JUMPING, DOWNING
 from Classes.Class_Dino import Dinosaur
 from Classes.Class_Obstacle import Obstacle
@@ -12,8 +12,6 @@ from Classes.Class_Cactus.Class_LargeCacuts import LargeCactus
 
 # Inicializar Pygame
 PG.init()
-PG = PG
-inicialitzar() #Styles
 
 
 #Programa principal
@@ -26,10 +24,11 @@ def main():
     points = 0
     obstacles = []
     font = PG.font.Font('freesansbold.ttf', 20)
+    
 
     while run:
-        PG.mixer.music.load("")
-        PG.mixer.music.play(-1)
+        #PG.mixer.music.load("")
+        #PG.mixer.music.play(-1)
         for event in PG.event.get():
             if event.type == PG.QUIT:
                 run = False
@@ -73,5 +72,5 @@ def main():
         clock.tick(30)
         PG.display.update()
 
-if __name__ == "main":
+if __name__ == "__main__":
     main()

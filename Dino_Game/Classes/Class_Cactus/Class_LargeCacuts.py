@@ -1,8 +1,8 @@
-from Dino_Game.Classes.Class_Obstacle import Obstacle
+from Classes.Class_Obstacle import Obstacle
 import pygame as PG
 import random
 import os
-from Styles.Style import SCREEN, inicialitzar
+from Styles.Style import SCREEN
 
 LARGE_CACTUS = [PG.image.load(os.path.join("Assets/Cactus", "LargeCactus1.png")),
                 PG.image.load(os.path.join("Assets/Cactus", "LargeCactus2.png")),
