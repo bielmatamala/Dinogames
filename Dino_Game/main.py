@@ -11,15 +11,15 @@ from Classes.Class_Cactus.Class_SmallCactus import SmallCactus
 from Classes.Class_Cactus.Class_LargeCacuts import LargeCactus
 
 # Inicializar Pygame
-pygame.init()
-PG = pygame
+PG.init()
+PG = PG
 inicialitzar() #Styles
 
 
 #Programa principal
 def main():
     run = True
-    player = Dinosaur()
+    Dino = Dinosaur()
     clock = PG.time.Clock()
     cloud = Cloud()
     game_speed = 20
@@ -27,50 +27,33 @@ def main():
     obstacles = []
     font = PG.font.Font('freesansbold.ttf', 20)
 
-    while run: 
-    
-
-#Marc -> class: Bird i catctus
-#Biel -> Class: Dino
-#Despres -> cloud, obstacle
-#fer un ftx per a les calsses un atre per les imategs... i un per cada clsse(dino, nubol, ...)
-
-def main_2():
-    # Versió completa amb obstacles i col·lisió
-    run = True
-    clock = PG.time.Clock()
-    player = Dinosaur()
-    cloud = Cloud()
-    game_speed = 20
-    points = 0
-    obstacles = []
-    font = PG.font.Font('freesansbold.ttf', 20)
-    
     while run:
+        PG.mixer.music.load("")
+        PG.mixer.music.play(-1)
         for event in PG.event.get():
-            if event.type == pygame.QUIT:
+            if event.type == PG.QUIT:
                 run = False
-        
-        SCREEN.fill((255, 255, 255))
-        userInput = pygame.key.get_pressed()
-        
-        # Crida a les classes del dinosaure
-        player.draw(SCREEN)
-        player.update(userInput)
-        
-        # Crida a la classe del núvol
+
+        SCREEN.fill((255,255,255))
+        userInput = PG.key.get_pressed()
+
+        # Cridar calsse del dinosuare
+        Dino.draw(SCREEN)
+        Dino.update(userInput)
+
+        # Cridar calsse del núvol
         cloud.draw(SCREEN)
         cloud.update(game_speed)
-        
+
         # Crear obstacles aleatòriament
         if len(obstacles) == 0:
-            obstacle_type = random.randint(0, 2)
-            if obstacle_type == 0:
-                obstacles.append(SmallCactus(SMALL_CACTUS))
-            elif obstacle_type == 1:
-                obstacles.append(LargeCactus(LARGE_CACTUS))
+            obstacle_tipus = random.randint(0,2)
+            if obstacle_tipus == 0:
+                obstacles.append(SmallCactus)
+            elif obstacle_tipus == 1:
+                obstacles.append(LargeCactus)
             else:
-                obstacles.append(Bird(BIRD))
+                obstacles.append(Bird)
         
         # Crida a les classes dels obstacles
         for obstacle in obstacles[:]:
@@ -81,12 +64,14 @@ def main_2():
         points += 1
         if points % 100 == 0:
             game_speed += 1
-        
+        # Ensenyaqr els punts per pantalla
         text = font.render("Points: " + str(points), True, (0, 0, 0))
         textRect = text.get_rect()
         textRect.center = (1100 // 2, 40)
         SCREEN.blit(text, textRect)
         
         clock.tick(30)
-        pygame.display.update()
-    
+        PG.display.update()
+
+if __name__ == "main":
+    main()
