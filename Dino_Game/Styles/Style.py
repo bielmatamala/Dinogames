@@ -1,5 +1,5 @@
-import pygame
-from Dino_Game.main import PG
+import pygame as PG
+
 
 # Constants
 SCREEN_WIDTH = 600
@@ -15,12 +15,12 @@ LIGHT_GRAY = (200, 200, 200)
 DARK_GRAY = (50, 50, 50)
 
 #crear la pantalla
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption("Dino_game")
-clock = pygame.time.Clock()
+screen = PG.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+PG.display.set_caption("Dino_game")
+clock = PG.time.Clock()
 
 # Font
-font = pygame.font.Font(None, 36)
+font = PG.font.Font(None, 36)
 
 
 def inicialitzar():
@@ -38,9 +38,9 @@ def inicialitzar():
     DARK_GRAY = (50, 50, 50)
 
     #crear la pantalla
-    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    pygame.display.set_caption("Dino_game")
-    clock = pygame.time.Clock()
+    screen = PG.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    PG.display.set_caption("Dino_game")
+    clock = PG.time.Clock()
 
     # Font
-    font = pygame.font.Font(None, 36)
+    font = PG.font.Font(None, 36)
