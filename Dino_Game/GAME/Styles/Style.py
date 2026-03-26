@@ -6,7 +6,7 @@ PG.init()
 # Constants Globals de la Pantalla
 #SCREEN_WIDTH = PG.display.set_mode((0,0), PG.FULLSCREEN).get_width()
 #SCREEN_HEIGHT =  PG.display.set_mode((0,0), PG.FULLSCREEN).get_height()
-
+s
 SCREEN_WIDTH = PG.display.set_mode((0,0), PG.FULLSCREEN).get_width()
 SCREEN_HEIGHT =  PG.display.set_mode((0,0), PG.FULLSCREEN).get_height()
 
