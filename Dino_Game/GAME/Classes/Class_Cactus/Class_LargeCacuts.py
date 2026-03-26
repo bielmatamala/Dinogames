@@ -3,10 +3,7 @@ import pygame as PG
 import random
 import os
 from Styles.Style import SCREEN
-
-LARGE_CACTUS = [PG.image.load(os.path.join("Assets/Cactus", "LargeCactus1.png")),
-                PG.image.load(os.path.join("Assets/Cactus", "LargeCactus2.png")),
-                PG.image.load(os.path.join("Assets/Cactus", "LargeCactus3.png"))]
+from Variables_Globals import LARGE_CACTUS
 
 # Classe del cactus gran que hereta de Obstacle
 class LargeCactus(Obstacle):

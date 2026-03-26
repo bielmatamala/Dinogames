@@ -2,9 +2,7 @@ from Classes.Class_Obstacle import Obstacle
 import pygame as PG
 import os
 from Styles.Style import SCREEN
-
-BIRD = [PG.image.load(os.path.join(r"Assets\Bird", r"Bird1.png")),
-        PG.image.load(os.path.join(r"Assets\Bird", r"Bird2.png"))]
+from Variables_Globals import BIRD
 
 # Classe de l'ocell que hereta de Obstacle
 class Bird(Obstacle):

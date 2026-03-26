@@ -30,7 +30,7 @@ class Dinosaur:
         self.dino_rect.y = self.Y_POS
     
     def update(self, userInput):
-        # Executa el moviment actual del dinosaure
+        # Fa el moviment actual del dinosaure
         if self.dino_duck:
             self.duck()
         if self.dino_run:
@@ -43,7 +43,7 @@ class Dinosaur:
             self.step_index = 0
 
         # Detecta entrada de l'usuari i canvia l'estat del dinosaure
-        if userInput[PG.K_UP] and not self.dino_jump:
+        if userInput[PG.K_UP] or userInput[PG.K_SPACE] and not self.dino_jump:
             self.dino_duck = False
             self.dino_run = False
             self.dino_jump = True
@@ -68,7 +68,7 @@ class Dinosaur:
         # Animació del salt del dinosaure
         self.image = self.jump_img
         if self.dino_jump:
-            self.dino_rect.y -= self.jump_vel * 4 # Mou el dinosaure cap a dalt
+            self.dino_rect.y -= self.jump_vel * 4 # Mou el dinosaure cap a amunt
             self.jump_vel -= 0.8 # Disminueix la velocitat per crear l'efecte de salt
             
         # Quan la velocitat arriba al límit, finalitza el salt
