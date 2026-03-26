@@ -1,15 +1,10 @@
 import pygame as PG
 
-# Engeguem Pygame aquí mateix perquè no ens peti res al crear finestres o lletres
 PG.init()
 
 # Constants Globals de la Pantalla
-#SCREEN_WIDTH = PG.display.set_mode((0,0), PG.FULLSCREEN).get_width()
-#SCREEN_HEIGHT =  PG.display.set_mode((0,0), PG.FULLSCREEN).get_height()
-s
 SCREEN_WIDTH = PG.display.set_mode((0,0), PG.FULLSCREEN).get_width()
 SCREEN_HEIGHT =  PG.display.set_mode((0,0), PG.FULLSCREEN).get_height()
-
 SCREEN = PG.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 PG.display.set_caption("Dino_game")
 
